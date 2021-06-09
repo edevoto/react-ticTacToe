@@ -11,3 +11,17 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.pickContainer{
+    display: flex;
+    justify-content: center; 
+    align-content: center;
+}
+.pickPlayer{
+    width: 90%;
+    height: 92vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
