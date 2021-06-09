@@ -8,22 +8,27 @@ export function Formulario() {
 	return opened ? (
 		<div className="pickContainer">
 			<form className="form-control bg-danger pickPlayer mt-4">
-				<label className="label"></label>
 				<div className="row form-group">
-					<input
-						type="text"
-						className="form-control col-6"
-						id="exampleInputEmail1"
-						aria-describedby="emailHelp"
-						placeholder="first Player"
-					/>
-					<input
-						type="text"
-						className="form-control col-6"
-						id="exampleInputEmail1"
-						aria-describedby="emailHelp"
-						placeholder="first Player"
-					/>
+					<div>
+						<label className="label">X</label>
+						<input
+							type="text col-6"
+							className="form-control"
+							id="exampleInputEmail1"
+							aria-describedby="emailHelp"
+							placeholder="first Player"
+						/>
+					</div>
+					<div>
+						<label className="label">O</label>
+						<input
+							type="text col-6"
+							className="form-control"
+							id="exampleInputEmail1"
+							aria-describedby="emailHelp"
+							placeholder="first Player"
+						/>
+					</div>
 				</div>
 				<div className="row">
 					<button
@@ -39,5 +44,27 @@ export function Formulario() {
 		<button type="button" onClick={() => setOpened(true)}>
 			Open
 		</button>
+	);
+}
+
+export function TicTacToe() {
+	return (
+		<div>
+			<div className="row bg-danger">
+				<div className="col-4 "></div>
+				<div className="col-4 "></div>
+				<div className="col-4 "></div>
+			</div>
+			<div className="row bg-danger">
+				<div className="col-4 "></div>
+				<div className="col-4 "></div>
+				<div className="col-4 "></div>
+			</div>
+			<div className="row bg-danger">
+				<div className="col-4 "></div>
+				<div className="col-4 "></div>
+				<div className="col-4 "></div>
+			</div>
+		</div>
 	);
 }

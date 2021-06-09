@@ -10,6 +10,6 @@ import "../styles/index.scss";
 
 //import your own components
 import { Formulario } from "./component/home.js";
-
 //render your react application
+
 ReactDOM.render(<Formulario />, document.querySelector("#app"));
