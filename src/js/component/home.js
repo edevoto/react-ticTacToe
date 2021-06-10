@@ -41,29 +41,39 @@ export function Formulario() {
 			</form>
 		</div>
 	) : (
-		<button type="button" onClick={() => setOpened(true)}>
-			Open
-		</button>
-	);
-}
-
-export function TicTacToe() {
-	return (
-		<div>
-			<div className="row bg-danger">
-				<div className="col-4 "></div>
-				<div className="col-4 "></div>
-				<div className="col-4 "></div>
+		<div className="row">
+			<div className="col-4 bg-danger">
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
 			</div>
-			<div className="row bg-danger">
-				<div className="col-4 "></div>
-				<div className="col-4 "></div>
-				<div className="col-4 "></div>
+			<div className="col-4 bg-danger">
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
 			</div>
-			<div className="row bg-danger">
-				<div className="col-4 "></div>
-				<div className="col-4 "></div>
-				<div className="col-4 "></div>
+			<div className="col-4 bg-danger">
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
+				<div className="row w-100 my-3 square">
+					<div className="col-12 bg-info">asdasd</div>
+				</div>
 			</div>
 		</div>
 	);
