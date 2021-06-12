@@ -1,6 +1,6 @@
 export function TicTacToe() {
 	return (
-		<div>
+		<div className="caja">
 			<div className="row bg-danger">
 				<div className="col-4 bg-dark">ADSGASG</div>
 				<div className="col-4 bg-dark"></div>

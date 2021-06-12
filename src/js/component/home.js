@@ -5,6 +5,11 @@ import React, { useState } from "react";
 export function Formulario() {
 	const [opened, setOpened] = useState(true);
 
+	const cuadrado = () => {
+		let btn = document.getElementById("boton");
+		console.log(btn);
+	};
+
 	return opened ? (
 		<div className="pickContainer">
 			<form className="form-control bg-danger pickPlayer mt-4">
@@ -41,38 +46,80 @@ export function Formulario() {
 			</form>
 		</div>
 	) : (
-		<div className="row">
-			<div className="col-4 bg-danger">
+		<div className="container caja  text-center d-flex justify-content-center align-items-center">
+			<div className="col-4  ">
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 			</div>
-			<div className="col-4 bg-danger">
+			<div className="col-4 ">
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div id="boton" className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 			</div>
-			<div className="col-4 bg-danger">
+			<div className="col-4 ">
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 				<div className="row w-100 my-3 square">
-					<div className="col-12 bg-info">asdasd</div>
+					<div
+						onClick={cuadrado}
+						id="boton"
+						className="col-12 bg-info">
+						asdasd
+					</div>
 				</div>
 			</div>
 		</div>
