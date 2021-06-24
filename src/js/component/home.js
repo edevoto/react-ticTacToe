@@ -4,7 +4,8 @@ import React, { useState } from "react";
 //create your first component
 export function Formulario() {
 	const [opened, setOpened] = useState(true);
-
+	const [player, setPlayer] = useState(null);
+	//cuadradsos TicTacToe
 	const cuadradoUno = () => {
 		let btn = document.getElementById("boton1");
 		if (btn.hasChildNodes()) {
@@ -12,6 +13,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -23,6 +25,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -34,6 +37,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -45,6 +49,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -56,6 +61,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -67,6 +73,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -78,6 +85,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -89,6 +97,7 @@ export function Formulario() {
 		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
 		}
 		console.log(btn);
@@ -97,13 +106,32 @@ export function Formulario() {
 		let btn = document.getElementById("boton9");
 		if (btn.hasChildNodes()) {
 			console.log(btn);
-		} else {
+		} else{
 			let x = document.createElement("h1");
 			x.textContent = "X";
+			x.classList.add("display-1");
 			btn.appendChild(x);
+
+			console.log(firstPLayer);
 		}
 		console.log(btn);
 	};
+	/// Fin cuadrados tictactoe
+
+	//Player picker
+	const firstPLayer = e => {
+		const firstP = { player: e.target.value };
+		console.log(firstP);
+		return firstPLayer;
+		///designar el valor de x al firstPlayer
+	};
+
+	const secondPLayer = e => {
+		const secondP = { player: e.target.value };
+		console.log(secondP);
+		///designar el valor de o al secondPlayer
+	};
+	///fin PlayerPicker
 
 	return opened ? (
 		<div className="pickContainer">
@@ -112,6 +140,7 @@ export function Formulario() {
 					<div>
 						<label className="label">X</label>
 						<input
+							onChange={firstPLayer}
 							type="text col-6"
 							className="form-control"
 							id="firstPLayer"
@@ -122,11 +151,12 @@ export function Formulario() {
 					<div>
 						<label className="label">O</label>
 						<input
+							onChange={secondPLayer}
 							type="text col-6"
 							className="form-control"
 							id="secondPlayer"
 							aria-describedby="emailHelp"
-							placeholder="first Player"
+							placeholder="Second Player"
 						/>
 					</div>
 				</div>
@@ -134,72 +164,80 @@ export function Formulario() {
 					<button
 						type="button"
 						className="btn btn-lg btn-light"
-						onClick={() => setOpened(false)}>
+						onClick={() => {
+							setOpened(false);
+						}}>
 						PLAY
 					</button>
 				</div>
 			</form>
 		</div>
 	) : (
-		<div className="container caja  text-center d-flex justify-content-center align-items-center p-5">
-			<div className="col-4 ">
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoUno}
-						id="boton1"
-						className="col-12 bg-danger"></div>
-				</div>
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoDos}
-						id="boton2"
-						className="col-12 bg-danger"></div>
-				</div>
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoTres}
-						id="boton3"
-						className="col-12 bg-danger"></div>
-				</div>
+		<div className="container">
+			<div className="row d-block text-center">
+				<h1 className="display-1 text-danger">Tic-Tac-Toe</h1>
+				<p className="text-warning">eDev.</p>
 			</div>
-			<div className="col-4 ">
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoCuatro}
-						id="boton4"
-						className="col-12 bg-danger"></div>
+			<div className="row caja  d-flex justify-content-center align-content-center">
+				<div className="col-4">
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoUno}
+							id="boton1"
+							className="col-12 bg-danger"></div>
+					</div>
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoDos}
+							id="boton2"
+							className="col-12 bg-danger"></div>
+					</div>
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoTres}
+							id="boton3"
+							className="col-12 bg-danger"></div>
+					</div>
 				</div>
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoCinco}
-						id="boton5"
-						className="col-12 bg-danger"></div>
+				<div className="col-4 ">
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoCuatro}
+							id="boton4"
+							className="col-12 bg-danger"></div>
+					</div>
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoCinco}
+							id="boton5"
+							className="col-12 bg-danger"></div>
+					</div>
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoSeis}
+							id="boton6"
+							className="col-12 bg-danger"></div>
+					</div>
 				</div>
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoSeis}
-						id="boton6"
-						className="col-12 bg-danger"></div>
-				</div>
-			</div>
-			<div className="col-4 ">
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoSiete}
-						id="boton7"
-						className="col-12 bg-danger"></div>
-				</div>
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoOcho}
-						id="boton8"
-						className="col-12 bg-danger"></div>
-				</div>
-				<div className="row w-100 my-4 square">
-					<div
-						onClick={cuadradoNueve}
-						id="boton9"
-						className="col-12 bg-danger"></div>
+				<div className="col-4 ">
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoSiete}
+							id="boton7"
+							className="col-12 bg-danger"></div>
+					</div>
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoOcho}
+							id="boton8"
+							className="col-12 bg-danger"></div>
+					</div>
+					<div className="row w-100 my-4 square">
+						<div
+							onClick={cuadradoNueve}
+							id="boton9"
+							className="col-12 bg-danger"></div>
+					</div>
 				</div>
 			</div>
 		</div>
