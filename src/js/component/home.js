@@ -4,7 +4,7 @@ import React, { useState } from "react";
 //create your first component
 export function Formulario() {
 	const [opened, setOpened] = useState(true);
-	const [player, setPlayer] = useState(null);
+	const [player, setPlayer] = useState({});
 	//cuadradsos TicTacToe
 	const cuadradoUno = () => {
 		let btn = document.getElementById("boton1");
@@ -106,7 +106,7 @@ export function Formulario() {
 		let btn = document.getElementById("boton9");
 		if (btn.hasChildNodes()) {
 			console.log(btn);
-		} else{
+		} else {
 			let x = document.createElement("h1");
 			x.textContent = "X";
 			x.classList.add("display-1");
@@ -120,16 +120,17 @@ export function Formulario() {
 
 	//Player picker
 	const firstPLayer = e => {
-		const firstP = { player: e.target.value };
-		console.log(firstP);
-		return firstPLayer;
-		///designar el valor de x al firstPlayer
+		setPlayer({ player: e.target.value, id: 1 });
+		return player.id;
 	};
 
 	const secondPLayer = e => {
-		const secondP = { player: e.target.value };
-		console.log(secondP);
-		///designar el valor de o al secondPlayer
+		setPlayer({ player: e.target.value, id: 2 });
+		return player.id;
+	};
+	const Player = () => {
+		console.log(firstPLayer);
+		console.log(secondPLayer);
 	};
 	///fin PlayerPicker
 
@@ -164,9 +165,7 @@ export function Formulario() {
 					<button
 						type="button"
 						className="btn btn-lg btn-light"
-						onClick={() => {
-							setOpened(false);
-						}}>
+						onClick={Player}>
 						PLAY
 					</button>
 				</div>
