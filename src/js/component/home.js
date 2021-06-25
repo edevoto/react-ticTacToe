@@ -5,6 +5,7 @@ import React, { useState } from "react";
 export function Formulario() {
 	const [opened, setOpened] = useState(true);
 	const [player, setPlayer] = useState({});
+	const [turn, setTurn] = useState(true);
 	//cuadradsos TicTacToe
 	const cuadradoUno = () => {
 		let btn = document.getElementById("boton1");
@@ -121,11 +122,14 @@ export function Formulario() {
 	//Player picker
 	const firstPLayer = e => {
 		setPlayer({ player: e.target.value, id: 1 });
-		return player.id;
+		setTurn(player.id);
+		console.log(turn);
+		//return player.id;
 	};
 
 	const secondPLayer = e => {
 		setPlayer({ player: e.target.value, id: 2 });
+		setTurn(player.id);
 		return player.id;
 	};
 	const Player = () => {
